@@ -1,0 +1,11 @@
+.NavBar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.NavBar-buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
