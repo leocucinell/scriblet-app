@@ -1,11 +1,14 @@
 import './LoginPage.css';
 import { useState } from 'react';
 import api from '../../api/api';
+import Toast from '../../components/Toast/Toast';
 
 const LoginPage = () => {
 
     const [email, setEmail] = useState("");
     const [ password, setPassword ] = useState("");
+    const [invalidEmailToast, setInvalidEmailToast] = useState(false);
+    const [invalidPasswordToast, setInvalidPasswordToast] = useState(false);
 
     const handleFormChange = (e, caller) => {
         switch(caller){
@@ -31,10 +34,48 @@ const LoginPage = () => {
         );
         console.log('TODO: Finish Auth functionality after redux installed');
         console.log(loginResponse);
+        if(loginResponse.data === "user does not exist"){
+            setInvalidEmailToast(true);
+        } else if (loginResponse.data === "Incorrect password"){
+            setInvalidPasswordToast(true)
+        }
+    }
+
+    const handleToastClick = (caller) => {
+        switch(caller){
+            case "email":
+                setInvalidEmailToast(false);
+                break;
+            case "password":
+                setInvalidPasswordToast(false);
+                break;
+            default:
+                console.log("Unreachable toast click case")
+        }
     }
 
     return(
         <div className="LoginPage-container">
+            {
+                invalidEmailToast ?
+                <Toast
+                    handleClick={() => handleToastClick("email")}
+                    message="User does not exist"
+                    warningColor="yellow"
+                />
+                :
+                null
+            }
+            {
+                invalidPasswordToast ?
+                <Toast 
+                    handleClick={() => handleToastClick("password")}
+                    message="Invalid password"
+                    warningColor="red"
+                />
+                :
+                null
+            }
             <img id="LoginPage-blob" src="login-blob.svg" alt="login-blob" />
             
             <div className="LoginPage-form-card">
