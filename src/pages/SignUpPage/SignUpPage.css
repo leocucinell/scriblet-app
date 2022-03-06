@@ -1,0 +1,83 @@
+.SignUpPage-container{
+    /* background img */
+    background-color: #0077E4;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SignUpPage-blob {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}
+
+.SignUpPage-form-card{
+    background-color: #FFFFFF;
+    width: 500px;
+    z-index: 10;
+    height: 550px;
+    box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.SignUpPage-form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 140px;
+    left: 30px;
+}
+
+.SignUpPage-input-labels {
+    font-family: Kodchasan;
+    font-size: 1.8em;
+}
+
+.SignUpPage-inputs{
+    border: hidden;
+    border-bottom: 2px dashed #000000;
+    font-family: Kodchasan;
+    font-size: 1.5em;
+    width: 220px;
+}
+.SignUpPage-inputs:focus{
+    outline: none;
+}
+
+#SignUpPage-email{
+    width: 360px;
+}
+#SignUpPage-password{
+    width: 300px;
+}
+#SignUpPage-confirm-password{
+    width: 330px;
+}
+
+#SignUpPage-email-container{
+    margin-bottom: 30px;
+}
+#SignUpPage-password-container{
+    margin-bottom: 30px;
+}
+
+.SignUpPage-button{
+    position: relative;
+    width: 164px;
+    height: 80px;
+    left: 163px;
+    top: 240px;
+
+    background: #FFEB83;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+
+    font-family: Kodchasan;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.SignUpPage-button:active{
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
