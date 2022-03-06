@@ -1,0 +1,78 @@
+.LoginPage-container{
+    /* background img */
+    background-color: #0077E4;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LoginPage-blob{
+    /* blob size satys same on page zoom-in / out? */
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+}
+
+.LoginPage-form-card{
+    background-color: #FFFFFF;
+    width: 500px;
+    z-index: 10;
+    height: 550px;
+    box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.LoginPage-form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 140px;
+    left: 95px;
+}
+
+.LoginPage-input-labels {
+    font-family: Kodchasan;
+    font-size: 1.8em;
+}
+
+.LoginPage-inputs{
+    border: hidden;
+    border-bottom: 2px dashed #000000;
+    font-family: Kodchasan;
+    font-size: 1.5em;
+    width: 220px;
+}
+.LoginPage-inputs:focus{
+    outline: none;
+}
+#LoginPage-password{
+    width: 160px;
+}
+
+#LoginPage-email-container{
+    margin-bottom: 30px;
+}
+#LoginPage-password-container{
+    
+}
+
+.LoginPage-button{
+    position: relative;
+    width: 164px;
+    height: 80px;
+    left: 163px;
+    top: 300px;
+
+    background: #FFEB83;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+
+    font-family: Kodchasan;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.LoginPage-button:active{
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}

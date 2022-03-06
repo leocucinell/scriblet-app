@@ -1,6 +1,9 @@
 .LandingPage-header{
     height: 90vh;
     background: #0077E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #LandingPage-svg-background {
     position: absolute;
@@ -8,4 +11,38 @@
     height: 750px;
     left: 350px;
     top: 150px;
+}
+
+.LandingPage-main-card{
+    z-index: 10;
+    width: 800px;
+    height: 500px;
+    background-image: url("https://images.unsplash.com/photo-1581464647110-26e129ce2d02?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    box-shadow: 6px 5px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: Kodchasan;
+}
+.LandingPage-main-card > span {
+    position: absolute;
+    font-size: 2.3em;
+    color: #FFFFFF
+}
+#LandingPage-span-1{
+    bottom: 300px;
+    left: 430px;
+}
+#LandingPage-span-2{
+    bottom: 250px;
+    left: 430px;
+}
+#LandingPage-span-3{
+    bottom: 200px;
+    left: 430px;
+}
+
+#LandingPage-mainbutton-container{
+    position: absolute;
+    width: 175px;
+    bottom: 200px;
+    left: 900px;
 }
