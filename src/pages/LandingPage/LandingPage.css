@@ -1,0 +1,11 @@
+.LandingPage-header{
+    height: 90vh;
+    background: #0077E4;
+}
+#LandingPage-svg-background {
+    position: absolute;
+    width: 1189.02px;
+    height: 750px;
+    left: 350px;
+    top: 150px;
+}

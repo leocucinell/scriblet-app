@@ -1,8 +1,17 @@
 import './LandingPage.css';
+import MainButton from '../../components/MainButton/MainButton';
 
 const LandingPage = () => {
     return(
-        <h1>Landing Page</h1>
+        <div className="LandingPage-container">
+            <div className="LandingPage-header">
+                <img id="LandingPage-svg-background" alt="background-slide" src='landing-background.svg' />
+                <div className="LandingPage-main-card">
+                    <h2>Enhance your learning</h2>
+                    <MainButton content="get started" />
+                </div>
+            </div>
+        </div>
     );
 }
 
