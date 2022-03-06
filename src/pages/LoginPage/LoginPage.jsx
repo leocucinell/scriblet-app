@@ -1,10 +1,14 @@
 import './LoginPage.css';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
 import api from '../../api/api';
 import Toast from '../../components/Toast/Toast';
+import { addStudent } from '../../features/currentStudentSlice'; 
 
 const LoginPage = () => {
 
+    const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [ password, setPassword ] = useState("");
     const [invalidEmailToast, setInvalidEmailToast] = useState(false);
@@ -32,13 +36,15 @@ const LoginPage = () => {
                 password: password
             }
         );
-        console.log('TODO: Finish Auth functionality after redux installed');
-        console.log(loginResponse);
         if(loginResponse.data === "user does not exist"){
             setInvalidEmailToast(true);
         } else if (loginResponse.data === "Incorrect password"){
             setInvalidPasswordToast(true)
+        } else {
+            localStorage.setItem("ScribletCurrentStudent", JSON.stringify(loginResponse.data));
+            dispatch(addStudent(loginResponse.data));
         }
+        return;
     }
 
     const handleToastClick = (caller) => {
