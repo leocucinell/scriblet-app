@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MainButton = ({content, navPoint}) => {
     return(
-        <Link to={`/${navPoint}`}>
+        <Link style={{textDecoration: 'none'}} to={`/${navPoint}`}>
             <div className="MainButton-container">
                 <span className="MainButton-span">{content}</span>
             </div>

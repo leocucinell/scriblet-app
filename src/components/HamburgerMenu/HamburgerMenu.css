@@ -1,0 +1,15 @@
+.HamburgerMenu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+    width: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.HamburgerMenu-bar {
+    height: 7px;
+    background-color: #000000;
+    border-radius: 10px;
+}

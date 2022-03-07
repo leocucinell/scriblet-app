@@ -53,9 +53,8 @@
 #LoginPage-email-container{
     margin-bottom: 30px;
 }
-#LoginPage-password-container{
-    
-}
+/* #LoginPage-password-container{
+} */
 
 .LoginPage-button{
     position: relative;

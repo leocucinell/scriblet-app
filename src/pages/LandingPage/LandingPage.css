@@ -9,7 +9,7 @@
     position: absolute;
     width: 1189.02px;
     height: 750px;
-    left: 350px;
+    right: -100px;
     top: 150px;
 }
 
@@ -23,7 +23,8 @@
     font-family: Kodchasan;
 }
 .LandingPage-main-card > span {
-    position: absolute;
+    position: absolute; 
+    /* TODO: Edit positioning to be inside card */
     font-size: 2.3em;
     color: #FFFFFF
 }

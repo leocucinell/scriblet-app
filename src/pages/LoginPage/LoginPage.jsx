@@ -1,6 +1,7 @@
 import './LoginPage.css';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 import api from '../../api/api';
 import Toast from '../../components/Toast/Toast';
@@ -8,12 +9,14 @@ import { addStudent } from '../../features/currentStudentSlice';
 
 const LoginPage = () => {
 
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [ password, setPassword ] = useState("");
     const [invalidEmailToast, setInvalidEmailToast] = useState(false);
     const [invalidPasswordToast, setInvalidPasswordToast] = useState(false);
-
+    
+    
     const handleFormChange = (e, caller) => {
         switch(caller){
             case "email":
@@ -43,6 +46,7 @@ const LoginPage = () => {
         } else {
             localStorage.setItem("ScribletCurrentStudent", JSON.stringify(loginResponse.data));
             dispatch(addStudent(loginResponse.data));
+            navigate('/home');
         }
         return;
     }

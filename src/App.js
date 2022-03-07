@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
@@ -13,13 +14,9 @@ function App() {
       <NavBar />
       <Routes>
           <Route path="/" element={<LandingPage />} />
-          {/* 
-              add a page container her to make other pages 
-              100vh - height of the NavBar:
-              calc(100vh - <NavBar pixel height>)
-          */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/home" element={<Home />} />
       </Routes>
     </div>
   );
