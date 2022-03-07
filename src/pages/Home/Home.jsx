@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 
 import { addStudent } from "../../features/currentStudentSlice";
+import SubjectsCard from "../../components/SubjectsCard/SubjectsCard";
+import QuizesCard from "../../components/QuizesCard/QuizesCard";
+import NotesCard from "../../components/NotesCard/NotesCard";
 
 const Home = () => {
 
@@ -27,7 +30,22 @@ const Home = () => {
     }, []);
 
     return(
-        <h1>Home</h1>
+        <div className="Home-container">
+            {/* <img id="Home-blob" alt='home blob' src="signup-blob.svg" /> */}
+
+            <div className="Home-grid-container">
+                <div className="Home-subjects-container">
+                    <SubjectsCard />
+                </div>
+                <div className="Home-quizes-container">
+                    <QuizesCard />
+                </div>
+                <div className="Home-notes-container">
+                    <NotesCard />
+                </div>
+            </div>
+
+        </div>
     );
 }
 

@@ -1,0 +1,32 @@
+.Home-container{
+    height: calc(100vh - 70px);
+    background-color: #0077E4;
+}
+#Home-blob{
+    position: absolute;
+    height: 500px;
+    left: calc(100vw - 700px);
+    top: calc(100vh - 500px);
+}
+
+.Home-grid-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.Home-subjects-container{ 
+    grid-area: 1 / 1 / 3 / 2; 
+    padding: 40px 30px;
+}
+.Home-quizes-container{ 
+    grid-area: 1 / 2 / 2 / 3; 
+    padding: 40px 30px;
+}
+.Home-notes-container{ 
+    grid-area: 2 / 2 / 3 / 3; 
+    padding: 40px 30px;
+}

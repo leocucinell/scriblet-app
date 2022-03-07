@@ -1,0 +1,13 @@
+.SubjectsCard-container{
+    overflow: hidden; /* NOTE: Check to see if a large list will still scroll*/
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 100%;
+}
+
+.SubjectsCard-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

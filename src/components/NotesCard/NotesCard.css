@@ -1,0 +1,13 @@
+.NotesCard-container{
+    background-color: white;
+    height: 100%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.NotesCard-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

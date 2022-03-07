@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-around;
     height: 70px;
+    z-index: 1000;
 }
 
 .NavBar-buttons-container{
