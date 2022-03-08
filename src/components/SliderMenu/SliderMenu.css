@@ -1,0 +1,32 @@
+.SliderMenu-container{
+    position: absolute;
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    width: 100vw;
+}
+
+.SliderMenu-gray-curtian{
+    background-color: #000000;
+    opacity: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.SliderMenu-options-list{
+    height: 100%;
+    width: 325px;
+    background: #000000;
+    opacity: 100%;
+    position: absolute;
+    right: 0px;
+    color: white
+}
+
+.SliderMenu-ul{
+    list-style: none;
+}
+
+.SliderMenu-li{
+    cursor: pointer;
+}

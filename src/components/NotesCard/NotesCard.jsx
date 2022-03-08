@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 
 const NotesCard = () => {
 
-    const notes = useSelector((state) => state.currentStudent.value.notes);
+    const notes = useSelector((state) => state.studentNotes.value);
 
     return(
         <div className="NotesCard-container">

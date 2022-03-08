@@ -1,12 +1,21 @@
 import './NavBar.css'
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 import MainButton from '../MainButton/MainButton';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+import SliderMenu from '../SliderMenu/SliderMenu';
 
 const NavBar = () => {
 
     const currentStudent = useSelector((state) => state.currentStudent.value);
+    const [toggleMenu, setToggleMenu] = useState(false);
+
+    const handlehamburgerClick = () => {
+        setToggleMenu(!toggleMenu);
+    }
+
+
     const renderBarContent = () => {
         if(Object.keys(currentStudent).length === 0){
             //No current student, render the login/signup buttons
@@ -19,7 +28,7 @@ const NavBar = () => {
         } else {
             //There is a current student, render the hamburger menu
             return(
-                <HamburgerMenu />
+                <HamburgerMenu handlehamburgerClick={handlehamburgerClick} />
             )
         }
     }
@@ -32,6 +41,12 @@ const NavBar = () => {
                 <MainButton navPoint="signup" content="sign up" />
             </div> */}
             {renderBarContent()}
+            {
+                toggleMenu ?
+                <SliderMenu setToggleMenu={setToggleMenu} />
+                :
+                null
+            }
         </div>
     );
 }

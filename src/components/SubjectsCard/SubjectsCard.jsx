@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const SubjectsCard = () => {
 
-    const subjects = useSelector((state) => state.currentStudent.value.subjects);
+    const subjects = useSelector((state) => state.studentSubjects.value);
 
     return(
         <div className="SubjectsCard-container">
@@ -21,7 +21,7 @@ const SubjectsCard = () => {
                             <p key={subject.id}>{subject.title}</p>
                         )
                     })
-                :
+                    :
                     <p>Loading...</p>
                 }
             </div>
