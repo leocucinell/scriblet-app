@@ -1,6 +1,8 @@
 import "./SubjectsCard.css";
 import { useSelector } from "react-redux";
 
+import StudyItem from "../StudyItem/StudyItem";
+
 const SubjectsCard = () => {
 
     const subjects = useSelector((state) => state.studentSubjects.value);
@@ -17,8 +19,9 @@ const SubjectsCard = () => {
                     ((subjects !== undefined) && (subjects.length > 0)) ?
                     subjects.map((subject) => {
                         return(
-                            //NOTE: Make a card component after styling home page
-                            <p key={subject.id}>{subject.title}</p>
+                            <div key={subject.id}>
+                                <StudyItem id={subject.id} caller="subject" title={subject.title} />
+                            </div>
                         )
                     })
                     :

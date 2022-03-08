@@ -7,6 +7,9 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import Home from './pages/Home/Home';
+import QuizPage from './pages/QuizPage/QuizPage';
+import SubjectPage from './pages/SubjectPage/SubjectPage';
+import NotePage from './pages/NotePage/NotePage';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/quiz/:quizId" element={<QuizPage />} /> {/* NOTE: /quiz/:studentId/:quizId */}
+          <Route path="/subject/:subjectId" element={<SubjectPage />} />
+          <Route path="/note/:noteId" element={<NotePage />} />
       </Routes>
     </div>
   );

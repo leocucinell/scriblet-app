@@ -1,0 +1,12 @@
+.StudyItem-container{
+    font-family: Kodchasan;
+}
+
+.StudyItem-span{
+    margin-left: 2%;
+    font-size: 2rem;
+}
+
+.StudyItem-hr{
+    width: 95%;
+}

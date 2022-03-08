@@ -1,6 +1,8 @@
 import "./QuizesCard.css"
 import { useSelector } from "react-redux"
 
+import StudyItem from "../StudyItem/StudyItem"
+
 const QuizesCard = () => {
 
     const quizes = useSelector((state) => state.studentQuizes.value)
@@ -17,7 +19,9 @@ const QuizesCard = () => {
                     ((quizes !== undefined) && (quizes.length > 0)) ?
                     quizes.map((quiz) => {
                         return(
-                            <p key={quiz.id}>{quiz.title}</p>
+                            <div key={quiz.id}>
+                                <StudyItem id={quiz.id} caller="quiz" title={quiz.title} />
+                            </div>
                         )
                     })
                     :

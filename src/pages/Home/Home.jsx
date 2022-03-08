@@ -41,7 +41,6 @@ const Home = () => {
     }, [currentStudent]);
 
     
-
     return(
         <div className="Home-container">
             {/* <img id="Home-blob" alt='home blob' src="signup-blob.svg" /> */}

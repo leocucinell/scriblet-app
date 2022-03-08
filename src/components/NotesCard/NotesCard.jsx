@@ -1,6 +1,8 @@
 import "./NotesCard.css"
 import { useSelector } from "react-redux"
 
+import StudyItem from "../StudyItem/StudyItem";
+
 const NotesCard = () => {
 
     const notes = useSelector((state) => state.studentNotes.value);
@@ -17,8 +19,10 @@ const NotesCard = () => {
                     ((notes !== undefined) && (notes.length > 0)) ?
                     notes.map((note) => {
                         return(
-                            <p key={note.id}>{note.title}</p>
-                        )
+                            <div key={note.id}>
+                                <StudyItem id={note.id} caller="note" title={note.title} />
+                            </div>
+                        );
                     })
                     :
                     <p>Loading...</p> //NOTE: change for UX
