@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import QuizPage from './pages/QuizPage/QuizPage';
 import SubjectPage from './pages/SubjectPage/SubjectPage';
 import NotePage from './pages/NotePage/NotePage';
+import AccountPage from './pages/AccountPage/AccountPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/quiz/:quizId" element={<QuizPage />} /> {/* NOTE: /quiz/:studentId/:quizId */}
           <Route path="/subject/:subjectId" element={<SubjectPage />} />
           <Route path="/note/:noteId" element={<NotePage />} />
+          <Route path="/account" element={<AccountPage />} />
       </Routes>
     </div>
   );

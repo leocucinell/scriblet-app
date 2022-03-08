@@ -1,0 +1,4 @@
+.AccountPage-container{
+    height: calc(100vh - 70px);
+    background-color: #0077E4;
+}

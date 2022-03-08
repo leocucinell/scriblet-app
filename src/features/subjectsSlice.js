@@ -16,9 +16,7 @@ export const subjectsSlice = createSlice({
     initialState: {value: []},
     reducers: {},
     extraReducers: {
-        [loadStudentSubjects.pending]: () => {
-            console.log('Loading student subjects...')
-        },
+        [loadStudentSubjects.pending]: () => {},
         [loadStudentSubjects.fulfilled]: (state, action) => {
             state.value = action.payload
         },

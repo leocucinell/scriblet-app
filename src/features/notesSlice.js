@@ -14,9 +14,7 @@ export const notesSlice = createSlice({
     initialState: {value: []},
     reducers: {},
     extraReducers: {
-        [loadStudentNotes.pending]: (state, action) => {
-            console.log('loading student notes');
-        },
+        [loadStudentNotes.pending]: (state, action) => {},
         [loadStudentNotes.fulfilled]: (state, action) => {
             state.value = action.payload;
         },

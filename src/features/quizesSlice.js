@@ -19,7 +19,7 @@ export const quizesSlice = createSlice({
             state.value = action.payload
         },
         [loadStudentQuizes.rejected]: () => {
-            console.log('REjected loadStudentQuizes')
+            console.log('Rejected loadStudentQuizes')
         }
     }
 });
