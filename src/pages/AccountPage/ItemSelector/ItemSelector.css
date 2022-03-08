@@ -1,0 +1,15 @@
+.ItemSelector-container{
+    /* NOTE: Change positioning after style item selector and cards */
+    padding: 30px;
+}
+
+.ItemSelector-tab-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.ItemSelector-tab{
+    background-color: #FFFFFF;
+    padding: 10px 15px; /* NOTE: increase after dynamic coloring*/
+    font-family: Kodchasan;
+}

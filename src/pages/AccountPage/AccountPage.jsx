@@ -24,6 +24,7 @@ const AccountPage = () => {
             if(isCurrentStudent){
                 dispatch(addStudent(JSON.parse(isCurrentStudent)));
             } else {
+                //nobody logged in, navigate back to the landing page
                 navigate('/');
             }
         } else {
