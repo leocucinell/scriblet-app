@@ -1,0 +1,17 @@
+.CardDisplay-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.CardDisplay-card{
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    padding: 10px 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.CardDisplay-card-span{
+    font-size: 1.6rem;
+    font-family: Kodchasan;
+}

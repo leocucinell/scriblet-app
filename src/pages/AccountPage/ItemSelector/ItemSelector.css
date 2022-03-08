@@ -9,7 +9,12 @@
 }
 
 .ItemSelector-tab{
-    background-color: #FFFFFF;
-    padding: 10px 15px; /* NOTE: increase after dynamic coloring*/
+    padding: 18px 32px; /* NOTE: increase after dynamic coloring*/
     font-family: Kodchasan;
+    font-size: 1.5rem;
+    border: 1px solid #000000;
+}
+
+#ItemSelector-hr{
+    margin: 0;
 }

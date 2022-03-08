@@ -1,4 +1,5 @@
 import "./CardsDisplay.css";
+import { Link } from "react-router-dom";
 
 const CardsDisplay = ({currentTab, cardSet}) => {
     return(
@@ -7,7 +8,11 @@ const CardsDisplay = ({currentTab, cardSet}) => {
                 cardSet ?
                 cardSet.map((item) => {
                     return(
-                        <p key={item.id}>{item.title}</p>
+                        <Link to={`/${currentTab}/${item.id}`}>
+                            <div className="CardDisplay-card">
+                                <span className="CardDisplay-card-span" key={item.id}>{item.title}</span>
+                            </div>
+                        </Link>
                     )
                 })
                 :

@@ -6,7 +6,7 @@ import CardsDisplay from "../CardsDisplay/CardsDisplay";
 
 const ItemSelector = () => {
 
-    const [currentTab, setCurrentTab] = useState("subjects");
+    const [currentTab, setCurrentTab] = useState("subject");
     const [subjectColor, setSubjectColor] = useState("yellow")
     const [quizColor, setQuizColor] = useState("white")
     const [noteColor, setNoteColor] = useState("white")
@@ -21,22 +21,22 @@ const ItemSelector = () => {
 
     const handleTabSelect = (selected) => {
         switch(selected){
-            case "subjects":
-                setCurrentTab("subjects");
+            case "subject":
+                setCurrentTab("subject");
                 setSubjectColor("yellow");
                 setQuizColor("white");
                 setNoteColor("white");
                 setCurrentCardSet(studentSubjects);
                 break;
-            case "quizes":
-                setCurrentTab("quizes");
+            case "quiz":
+                setCurrentTab("quiz");
                 setSubjectColor("white");
                 setQuizColor("yellow");
                 setNoteColor("white");
                 setCurrentCardSet(studentQuizes);
                 break;
-            case "notes":
-                setCurrentTab("notes");
+            case "note":
+                setCurrentTab("note");
                 setSubjectColor("white");
                 setQuizColor("white");
                 setNoteColor("yellow");
@@ -52,26 +52,27 @@ const ItemSelector = () => {
             <div className="ItemSelector-tab-container">
                 <div 
                     style={{backgroundColor: subjectColor}} 
-                    onClick={() => handleTabSelect("subjects")} 
+                    onClick={() => handleTabSelect("subject")} 
                     className="ItemSelector-tab"
                 >
                     <span>subjects</span>
                 </div>
                 <div 
                     style={{backgroundColor: quizColor}}
-                    onClick={() => handleTabSelect("quizes")} 
+                    onClick={() => handleTabSelect("quiz")} 
                     className="ItemSelector-tab"
                 >
                     <span>quizes</span>
                 </div>
                 <div 
                     style={{backgroundColor: noteColor}}
-                    onClick={() => handleTabSelect("notes")} 
+                    onClick={() => handleTabSelect("note")} 
                     className="ItemSelector-tab"
                 >
                     <span>notes</span>
                 </div>
             </div>
+            <hr id="ItemSelector-hr" />
             <div className="ItemSelector-cards-container">
                 <CardsDisplay currentTab={currentTab} cardSet={currentCardSet} />
             </div>
