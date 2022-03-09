@@ -1,4 +1,11 @@
 .SubjectPage-container{
     height: calc(100vh - 70px);
     background-color: #0077E4;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#SubjectPage-span{
+    font-family: Kodchasan;
+    font-size: 2.5rem;
 }

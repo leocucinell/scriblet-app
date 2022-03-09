@@ -15,7 +15,6 @@ const SubjectPage = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-
         //if no current student
         if(Object.keys(currentStudent).length === 0){
             //grab student from local storage
@@ -31,10 +30,12 @@ const SubjectPage = () => {
         }
         retrieveSubject();
     }, [])
+
+
     return(
         <div className="SubjectPage-container">
-            <h1>{subjectObj.title}</h1>
-            <DetailSelector subject={subjectObj} />
+            <span id="SubjectPage-span">{subjectObj.title}</span>
+            <DetailSelector setSubjectObj={setSubjectObj} subject={subjectObj} currentStudent={currentStudent}  />
         </div>
     )
 }
