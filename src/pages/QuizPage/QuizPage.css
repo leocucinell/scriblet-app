@@ -1,0 +1,23 @@
+.QuizPage-container{
+    background-color: #0077E4;
+    height: calc(100vh - 70px);
+}
+
+
+
+
+.QuizPage-question-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 15px;
+    font-family: Kodchasan;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-top: 10px;
+}
