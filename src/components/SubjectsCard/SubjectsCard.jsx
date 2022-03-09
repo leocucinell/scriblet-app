@@ -1,17 +1,28 @@
 import "./SubjectsCard.css";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 import StudyItem from "../StudyItem/StudyItem";
+import AddSubjectCard from "../AddSubjectCard/AddSubjectCard";
 
 const SubjectsCard = () => {
 
     const subjects = useSelector((state) => state.studentSubjects.value);
+    const [showAddItem, setShowAddItem] = useState(false);
+
+    const handleAddSubject = () => {
+        setShowAddItem(true);
+    }
+
+    const handleRemoveAddItem = () => {
+        setShowAddItem(false);
+    }
 
     return(
         <div className="SubjectsCard-container">
             <div className="SubjectsCard-banner">
                 <h2>Subjects</h2>
-                <button>+</button>
+                <button onClick={handleAddSubject}>+</button>
             </div>
             <hr />
             <div className="SubjectsCard-list">
@@ -26,6 +37,12 @@ const SubjectsCard = () => {
                     })
                     :
                     <p>Loading...</p>
+                }
+                {
+                    showAddItem ?
+                    <AddSubjectCard handleRemoveAddItem={handleRemoveAddItem} />
+                    :
+                    null
                 }
             </div>
         </div>

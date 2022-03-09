@@ -1,17 +1,24 @@
 import "./NotesCard.css"
 import { useSelector } from "react-redux"
+import { useNavigate } from "react-router";
 
 import StudyItem from "../StudyItem/StudyItem";
 
 const NotesCard = () => {
 
+    const navigate = useNavigate();
     const notes = useSelector((state) => state.studentNotes.value);
+
+    const handleAddNote = () => {
+        console.log('Implement add note route / page');
+        //navigate('/note/add');
+    }
 
     return(
         <div className="NotesCard-container">
             <div className="NotesCard-banner">
                 <h2>Notes</h2>
-                <button>+</button>
+                <button onClick={handleAddNote}>+</button>
             </div>
             <hr />
             <div className='NotesCard-list'>

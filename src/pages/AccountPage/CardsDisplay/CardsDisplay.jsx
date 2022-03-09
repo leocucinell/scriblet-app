@@ -8,11 +8,13 @@ const CardsDisplay = ({currentTab, cardSet}) => {
                 cardSet ?
                 cardSet.map((item) => {
                     return(
-                        <Link to={`/${currentTab}/${item.id}`}>
-                            <div className="CardDisplay-card">
-                                <span className="CardDisplay-card-span" key={item.id}>{item.title}</span>
-                            </div>
-                        </Link>
+                        <div key={item.id}>
+                            <Link to={`/${currentTab}/${item.id}`}>
+                                <div className="CardDisplay-card">
+                                    <span className="CardDisplay-card-span">{item.title}</span>
+                                </div>
+                            </Link>
+                        </div>
                     )
                 })
                 :

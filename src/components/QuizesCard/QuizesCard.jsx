@@ -1,17 +1,29 @@
 import "./QuizesCard.css"
 import { useSelector } from "react-redux"
+import { useState } from "react"
 
 import StudyItem from "../StudyItem/StudyItem"
 
+import AddQuizCard from "../AddQuizCard/AddQuizCard"
+
 const QuizesCard = () => {
 
-    const quizes = useSelector((state) => state.studentQuizes.value)
+    const quizes = useSelector((state) => state.studentQuizes.value);
+    const [showAddItem, setShowAddItem] = useState(false);
+
+    const handleAddItem = () => {
+        setShowAddItem(true);
+    }
+
+    const handleRemoveAddItem = () => {
+        setShowAddItem(false)
+    }
 
     return(
         <div className="QuizesCard-container">
             <div className="QuizesCard-banner">
                 <h2>Quizes</h2>
-                <button>+</button>
+                <button onClick={handleAddItem}>+</button>
             </div>
             <hr />
             <div className='QuizesCard-list'>
@@ -26,6 +38,12 @@ const QuizesCard = () => {
                     })
                     :
                     <p>Loading...</p>
+                }
+                {
+                    showAddItem ?
+                    <AddQuizCard handleRemoveAddItem={handleRemoveAddItem} />
+                    :
+                    null
                 }
             </div>
         </div>
