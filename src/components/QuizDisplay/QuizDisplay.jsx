@@ -12,6 +12,10 @@ const QuizDisplay = ({questions}) => {
         setShowAnswer(!showAnswer);
     }
 
+    const nextQuestionHandler = () => {
+        setShowAnswer(false);
+    }
+
     return(
         <div className="QuizDisplay-container">
             <div onClick={handleClick} className="QuizDisplay-card">
@@ -23,11 +27,15 @@ const QuizDisplay = ({questions}) => {
                 }
             </div>
             <div className="QuizDisplay-bottom-bar">
-                <QuestionsChangeButton operator="minus" currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} length={questions.length} />
+                <div onClick={nextQuestionHandler}>
+                    <QuestionsChangeButton operator="minus" currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} length={questions.length} />
+                </div>
                 <span className="QuizDisplay-progress">
                     {currentQuestion + 1} / {questions.length}
                 </span>
-                <QuestionsChangeButton operator="plus" currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} length={questions.length} />
+                <div onClick={nextQuestionHandler}>
+                    <QuestionsChangeButton operator="plus" currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} length={questions.length} />
+                </div>
             </div> 
         </div>
     )

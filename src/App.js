@@ -11,6 +11,7 @@ import QuizPage from './pages/QuizPage/QuizPage';
 import SubjectPage from './pages/SubjectPage/SubjectPage';
 import NotePage from './pages/NotePage/NotePage';
 import AccountPage from './pages/AccountPage/AccountPage';
+import QuizStartPage from './pages/QuizStartPage/QuizStartPage';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/quiz/:quizId" element={<QuizPage />} /> {/* NOTE: /quiz/:studentId/:quizId */}
+          <Route path="/quiz/:quizId" element={<QuizPage />} />
+          <Route path="/quiz/:quizId/start" element={<QuizStartPage />} />
           <Route path="/subject/:subjectId" element={<SubjectPage />} />
           <Route path="/note/:noteId" element={<NotePage />} />
           <Route path="/account" element={<AccountPage />} />

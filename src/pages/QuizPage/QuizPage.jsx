@@ -1,5 +1,6 @@
 import "./QuizPage.css";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import api from "../../api/api";
@@ -63,8 +64,9 @@ const QuizPage = () => {
             <span id="QuizPage-title">{quiz.title}</span>
             <div className="QuizPage-quiz-container">
                 <div className="QuizPage-options-container">
-                    <span id="QuizPage-start" className="QuizPage-option">Start</span>
-                    <span id="QuizPage-edit" className="QuizPage-option">Edit</span>
+                    <Link to={`/quiz/${quizId}/start`}><span id="QuizPage-start" className="QuizPage-option">Start</span></Link>
+                    <Link to='/'><span id="QuizPage-edit" className="QuizPage-option">Edit</span></Link>
+                    {/* NOTE: Change the to link above when ready */}
                 </div>
                 <div className="QuizPage-quiz">
                     {renderQuizCard()}
