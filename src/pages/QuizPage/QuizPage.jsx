@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 
 import api from "../../api/api";
+import QuizDisplay from "../../components/QuizDisplay/QuizDisplay";
 
 const QuizPage = () => {
     //NOTE: Page is reliant on the URL Params... not current user
@@ -18,7 +19,7 @@ const QuizPage = () => {
     }, [])
 
     //NOTE: Delete me after testing page
-    console.log(quiz)
+    //console.log(quiz)
     //-----------------------------------
 
     const renderQuestionsList = () => {
@@ -45,15 +46,28 @@ const QuizPage = () => {
         )
     }
 
+    const renderQuizCard = () => {
+        return(
+            Object.keys(quiz).length !== 0 ?
+                Object.keys(quiz.questions).length !== 0 ?
+                    <QuizDisplay questions={quiz.questions} />
+                :
+                <p>Write some questions first!</p>
+            :
+            <p>Loading...</p>
+        )
+    }
+
     return(
         <div className="QuizPage-container">
-            <span>{quiz.title}</span>
+            <span id="QuizPage-title">{quiz.title}</span>
             <div className="QuizPage-quiz-container">
                 <div className="QuizPage-options-container">
-                    <p>Options container</p>
+                    <span id="QuizPage-start" className="QuizPage-option">Start</span>
+                    <span id="QuizPage-edit" className="QuizPage-option">Edit</span>
                 </div>
                 <div className="QuizPage-quiz">
-                    <p>Quiz Container</p>
+                    {renderQuizCard()}
                 </div>
             </div>
             <hr />
