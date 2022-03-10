@@ -1,0 +1,8 @@
+.QuizStartPage-container{
+    background-color: #0077E4;
+    height: calc(100vh - 70px);
+    font-family: Kodchasan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
