@@ -13,6 +13,7 @@ import NotePage from './pages/NotePage/NotePage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import QuizStartPage from './pages/QuizStartPage/QuizStartPage';
 import CreateNotePage from './pages/CreateNotePage/CreateNotePage';
+import EditQuizPage from './pages/EditQuizPage/EditQuizPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/quiz/:quizId" element={<QuizPage />} />
           <Route path="/quiz/:quizId/start" element={<QuizStartPage />} />
+          <Route path="/quiz/:quizId/edit" element={<EditQuizPage />} />
           <Route path="/subject/:subjectId" element={<SubjectPage />} />
           <Route path="/note/:noteId" element={<NotePage />} />
           <Route path="/account" element={<AccountPage />} />

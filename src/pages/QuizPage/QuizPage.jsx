@@ -17,11 +17,7 @@ const QuizPage = () => {
             setQuiz(quizData.data);
         }
         LoadQuiz();
-    }, [])
-
-    //NOTE: Delete me after testing page
-    //console.log(quiz)
-    //-----------------------------------
+    }, []);
 
     const renderQuestionsList = () => {
         return(
@@ -65,8 +61,7 @@ const QuizPage = () => {
             <div className="QuizPage-quiz-container">
                 <div className="QuizPage-options-container">
                     <Link to={`/quiz/${quizId}/start`}><span id="QuizPage-start" className="QuizPage-option">Start</span></Link>
-                    <Link to='/'><span id="QuizPage-edit" className="QuizPage-option">Edit</span></Link>
-                    {/* NOTE: Change the to link above when ready */}
+                    <Link to={`/quiz/${quizId}/edit`}><span id="QuizPage-edit" className="QuizPage-option">Edit</span></Link>
                 </div>
                 <div className="QuizPage-quiz">
                     {renderQuizCard()}
