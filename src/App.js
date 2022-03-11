@@ -12,6 +12,7 @@ import SubjectPage from './pages/SubjectPage/SubjectPage';
 import NotePage from './pages/NotePage/NotePage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import QuizStartPage from './pages/QuizStartPage/QuizStartPage';
+import CreateNotePage from './pages/CreateNotePage/CreateNotePage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/subject/:subjectId" element={<SubjectPage />} />
           <Route path="/note/:noteId" element={<NotePage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/note/new" element={<CreateNotePage />} />
       </Routes>
     </div>
   );

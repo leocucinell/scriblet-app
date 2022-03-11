@@ -10,8 +10,7 @@ const NotesCard = () => {
     const notes = useSelector((state) => state.studentNotes.value);
 
     const handleAddNote = () => {
-        console.log('Implement add note route / page');
-        //navigate('/note/add');
+        navigate('/note/new');
     }
 
     return(

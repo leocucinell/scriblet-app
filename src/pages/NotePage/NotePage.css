@@ -1,0 +1,17 @@
+.NotePage-container{
+    background-color: #0077E4;
+    font-family: Kodchasan;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NotePage-title{
+
+}
+
+.NotePage-body{
+
+}
