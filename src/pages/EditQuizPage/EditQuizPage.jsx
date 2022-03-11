@@ -21,6 +21,16 @@ const EditQuizPage = () => {
         LoadQuiz();
     }, []);
 
+    const handleDeleteQuestion = async (id) => {
+        await api.delete(`question/${id}`);
+        async function LoadQuiz(){
+            const quizData = await api.get(`quiz/${quizId}`);
+            setQuiz(quizData.data);
+            return quizData.data;
+        }
+        LoadQuiz();
+    }
+
     const renderQuestionsList = () => {
         return(
             Object.keys(quiz).length !== 0 ?
@@ -35,6 +45,7 @@ const EditQuizPage = () => {
                             <div className="QuizPage-answer-side">
                                 <span>{question.answer}</span>
                             </div>
+                            <button onClick={() => handleDeleteQuestion(question.id)}>-</button>
                         </div>
                     )
                 })
