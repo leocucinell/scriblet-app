@@ -98,6 +98,8 @@ const EditQuizPage = () => {
             }
         );
         setShowCard(false);
+        setAddQuestion("");
+        setAddAnswer("");
         async function LoadQuiz(){
             const quizData = await api.get(`quiz/${quizId}`);
             setQuiz(quizData.data);
@@ -117,10 +119,12 @@ const EditQuizPage = () => {
                 {
                     showCard ?
                     <div className="EditQuizPage-add-question">
-                        <input onChange={(e) => handleQuestionChange(e)} value={addQuestion} type="text" placeholder="Question..." />
-                        <input onChange={(e) => handleAnswerChange(e)} value={addAnswer} type="text" placeholder="Answer..." />
-                        <button onClick={handleAddQuestion}>+</button>
-                        <button onClick={handleRemoveAddQuestion}>-</button>
+                        <input className="EditQuizPage-input-container" onChange={(e) => handleQuestionChange(e)} value={addQuestion} type="text" placeholder="Question..." />
+                        <input className="EditQuizPage-input-container" onChange={(e) => handleAnswerChange(e)} value={addAnswer} type="text" placeholder="Answer..." />
+                        <div  className="EditQuizPage-add-buttons">
+                            <button className="EditQuizPage-add-button-plus" onClick={handleAddQuestion}><span className="EditQuizPage-plus-button-span">+</span></button>
+                            <button className="EditQuizPage-add-button-minus" onClick={handleRemoveAddQuestion}><span className="EditQuizPage-minus-button-span">-</span></button>
+                        </div>
                     </div>
                     :
                     null
