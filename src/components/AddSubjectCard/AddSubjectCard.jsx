@@ -24,11 +24,9 @@ const AddSubjectCard = ({handleRemoveAddItem}) => {
 
     return(
         <div className="SubjectsCard-add-container">
-            <form className="AddSubjectCard-form">
-                <input onChange={(e) => setSubjectName(e.target.value)} value={subjectName} type="text" placeholder="Subject name..."/>
-            </form>
-            <button onClick={handleAddSubject}>add</button>
-            <button onClick={handleRemoveAddItem}>-</button>
+            <input className="SubjectCard-add-input" onChange={(e) => setSubjectName(e.target.value)} value={subjectName} type="text" placeholder="Subject name..."/>
+            <button className="SubjectCard-confirm-btn" onClick={handleAddSubject}>add</button>
+            <button className="SubjectCard-delete-btn" onClick={handleRemoveAddItem}>-</button>
         </div>
     )
 }

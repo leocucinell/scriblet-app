@@ -41,20 +41,18 @@ const AddQuizCard = ({handleRemoveAddItem}) => {
 
     return(
         <div className="AddQuizCard-add-container">
-            <form className="AddQuizCard-form">
-                <input value={quizTitle} onChange={(e) => handleTitleChange(e)} type="text" placeholder="Quiz name..." />
-                <select value={selectorValue} onChange={(e) => handleSelectorChange(e)}>
-                    {
-                        studentSubjects.map((subject) => {
-                            return(
-                                <option key={subject.id} value={subject.id}>{subject.title}</option>
-                            )
-                        })
-                    }
-                </select>
-            </form>
-            <button onClick={handleAddQuiz}>add</button>
-            <button onClick={handleRemoveAddItem}>-</button>
+            <input className="AddQuizCard-new-input" value={quizTitle} onChange={(e) => handleTitleChange(e)} type="text" placeholder="Quiz name..." />
+            <select value={selectorValue} onChange={(e) => handleSelectorChange(e)}>
+                {
+                    studentSubjects.map((subject) => {
+                        return(
+                            <option key={subject.id} value={subject.id}>{subject.title}</option>
+                        )
+                    })
+                }
+            </select>
+            <button className="AddQuizCard-confirm-btn" onClick={handleAddQuiz}>add</button>
+            <button className="AddQuizCard-remove-btn" onClick={handleRemoveAddItem}>-</button>
         </div>
     );
 }

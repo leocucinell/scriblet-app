@@ -29,7 +29,7 @@ const SubjectPage = () => {
             setSubjectObj(subject.data);
         }
         retrieveSubject();
-    }, [])
+    }, [dispatch, subjectId, currentStudent]);
 
 
     return(

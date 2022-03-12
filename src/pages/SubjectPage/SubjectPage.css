@@ -3,6 +3,7 @@
     background-color: #0077E4;
     padding-left: 100px;
     padding-right: 100px;
+    overflow-y: scroll;
 }
 
 #SubjectPage-span{

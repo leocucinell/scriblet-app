@@ -17,3 +17,11 @@
 #DetailSelector-hr{
     margin: 0px;
 }
+
+#DetailSelector-add-btn{
+    width: 50px;
+    font-size: 1.7rem;
+    background-color: #08d545;
+    border: 1px solid black;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+.CreateQuizCard-container{
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-family: Kodchasan;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.CreateQuizCard-input{
+    padding: 10px 5px;
+    font-size: 1.3rem;
+    border: none;
+    border-bottom: 1px dashed #000000;
+    width: 50%;
+}
+
+.CreateQuizCard-btns-container{
+    margin-top: 3px;
+}
+.CreateQuizCard-btn{
+    border: none;
+    padding: 8px 10px;
+    font-size: 1.3rem;
+    background-color: #41c63c;
+    color: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+#CreateQuizCard-minus-btn{
+    background-color: #ec1616;
+}

@@ -1,12 +1,21 @@
 .StudyItem-container{
     font-family: Kodchasan;
+    text-decoration: none;
 }
 
 .StudyItem-span{
     margin-left: 2%;
     font-size: 2rem;
+    text-decoration: none;
+    color: #000000;
 }
 
 .StudyItem-hr{
     width: 95%;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.StudyItem-Link{
+    text-decoration: none;
 }

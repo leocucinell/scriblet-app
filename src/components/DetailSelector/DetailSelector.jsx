@@ -17,7 +17,7 @@ const DetailSelector = ({setSubjectObj, subject, currentStudent}) => {
         if(currentTab === "quiz"){
             setShowCreateQuiz(true);
         } else if (currentTab === "note"){
-            // navigate('/notes/add')
+            navigate('/note/new');
             console.log('Handle create note')
         }
     }
@@ -53,7 +53,7 @@ const DetailSelector = ({setSubjectObj, subject, currentStudent}) => {
                 </div>
                 {
                     subject.owner_id === currentStudent.id ?
-                    <button onClick={handleAdd}>+</button>
+                    <button id="DetailSelector-add-btn" onClick={handleAdd}>+</button>
                     :
                     null
                 }
