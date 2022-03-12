@@ -21,8 +21,8 @@ const SubjectsCard = () => {
     return(
         <div className="SubjectsCard-container">
             <div className="SubjectsCard-banner">
-                <h2>Subjects</h2>
-                <button onClick={handleAddSubject}>+</button>
+            <span className="Home-card-title">Subjects</span>
+                <button className="Home-add-button" onClick={handleAddSubject}><span className="Home-add-span">+</span></button>
             </div>
             <hr />
             <div className="SubjectsCard-list">

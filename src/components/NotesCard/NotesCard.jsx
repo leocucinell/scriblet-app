@@ -16,8 +16,8 @@ const NotesCard = () => {
     return(
         <div className="NotesCard-container">
             <div className="NotesCard-banner">
-                <h2>Notes</h2>
-                <button onClick={handleAddNote}>+</button>
+                <span className="Home-card-title">Notes</span>
+                <button className="Home-add-button" onClick={handleAddNote}><span className="Home-add-span">+</span></button>
             </div>
             <hr />
             <div className='NotesCard-list'>

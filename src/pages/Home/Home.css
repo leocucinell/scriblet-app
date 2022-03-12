@@ -24,9 +24,57 @@
 }
 .Home-quizes-container{ 
     grid-area: 1 / 2 / 2 / 3; 
-    padding: 40px 30px;
+    padding: 40px 10px 10px 10px;
 }
 .Home-notes-container{ 
     grid-area: 2 / 2 / 3 / 3; 
-    padding: 40px 30px;
+    padding: 10px 10px 40px 10px;
+}
+
+.Home-card-title{
+    font-size: 2rem;
+    font-family: Kodchasan;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.Home-add-button{
+    /* position: relative; */
+    background-color: #FFEB83;
+    border-radius: 50%;
+    border: none;
+    width: 60px;
+    height: 60px;
+    /* right: 10px;
+    top: 10px; */
+    margin-top: 7px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+.Home-add-span{
+    position: relative;
+    font-size: 5rem;
+    font-family: Kodchasan;
+    color: #FFFFFF;
+    bottom: 32px;
+    z-index: 0.5;
+}
+
+@media screen and (max-width: 700px) {
+    .Home-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .Home-subjects-container{
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 10px 10px
+    }
+    .Home-quizes-container{
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 10px 10px
+    }
+    .Home-notes-container{
+        grid-area: 3 / 1 / 4 / 2;
+        padding: 10px 10px
+    }
 }

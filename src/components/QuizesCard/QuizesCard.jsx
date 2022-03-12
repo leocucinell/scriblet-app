@@ -22,8 +22,8 @@ const QuizesCard = () => {
     return(
         <div className="QuizesCard-container">
             <div className="QuizesCard-banner">
-                <h2>Quizes</h2>
-                <button onClick={handleAddItem}>+</button>
+                <span className="Home-card-title">Quizes</span>
+                <button className="Home-add-button" onClick={handleAddItem}><span className="Home-add-span">+</span></button>
             </div>
             <hr />
             <div className='QuizesCard-list'>
