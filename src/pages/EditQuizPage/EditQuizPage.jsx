@@ -64,7 +64,7 @@ const EditQuizPage = () => {
                             <div className="QuizPage-answer-side">
                                 <span>{question.answer}</span>
                             </div>
-                            <button className="EditQuizPage-delete-question" onClick={() => handleDeleteQuestion(question.id)}>-</button>
+                            <button className="EditQuizPage-delete-question" onClick={() => handleDeleteQuestion(question.id)}><span className="EditQuizPage-delete-span">-</span></button>
                         </div>
                     )
                 })

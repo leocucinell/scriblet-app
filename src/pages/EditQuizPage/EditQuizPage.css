@@ -37,4 +37,22 @@
 
 .EditQuizPage-delete-question{
     padding: 10px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: #fe2c2c;
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.EditQuizPage-delete-span{
+    color: #FFFFFF;
+    font-size: 2rem;
+    position: relative;
+    bottom: 20px;
+    right: 5px;
+
 }
