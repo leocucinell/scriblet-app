@@ -33,17 +33,14 @@ const NotePage = () => {
             }
         }
     }, []);
-    console.log(currentStudent);
-    console.log(note)
 
     const handleEdit = async () => {
         //Check if the note owner is the current user
-        const editedNote = await api.put(`note/${noteId}`, {
+        await api.put(`note/${noteId}`, {
             title: noteTitle,
             body: noteBody,
             subject_id: note.subject_id
         });
-        console.log(editedNote);
     }
 
     const handleTitleChange = (e) => {

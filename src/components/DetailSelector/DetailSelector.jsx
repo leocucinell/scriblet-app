@@ -18,7 +18,6 @@ const DetailSelector = ({setSubjectObj, subject, currentStudent}) => {
             setShowCreateQuiz(true);
         } else if (currentTab === "note"){
             navigate('/note/new');
-            console.log('Handle create note')
         }
     }
 

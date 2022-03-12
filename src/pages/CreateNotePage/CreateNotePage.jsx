@@ -65,16 +65,21 @@ const CreateNotePage = () => {
 
     return(
         <div className="CreateNotePage-container">
-            <input placeholder="title" onChange={(e) => handleTitleChange(e)} type="text" className="CreateNotePage-title" value={noteTitle}></input>
+            <div className="CreateNotePage-top-banner">
+                <input placeholder="Note title..." onChange={(e) => handleTitleChange(e)} type="text" className="CreateNotePage-title" value={noteTitle}></input>
+                <div className="CreateNotePage-subjects-container">
+                    <label className="CreateNotePage-subject-label" htmlFor="CreateNotePage-id-subject" >Subject:</label>
+                    <select id="CreateNotePage-id-subject" value={selectedSubject} onChange={handleSubjectChange}>
+                        {
+                            subjects.map((subject) => {
+                                return(<option key={subject.id} value={subject.id}>{subject.title}</option>)
+                            })
+                        }
+                    </select>
+                </div>
+            </div>
             <textarea placeholder="body" onChange={(e) => handleBodyChange(e)} className="CreateNotePage-body" value={noteBody}></textarea>
-            <select value={selectedSubject} onChange={handleSubjectChange}>
-                {
-                    subjects.map((subject) => {
-                        return(<option key={subject.id} value={subject.id}>{subject.title}</option>)
-                    })
-                }
-            </select>
-            <button onClick={handleSubmit}>submit</button>
+            <button className="NotePage-Owner-submit" onClick={handleSubmit}>submit</button>
         </div>
     )
 }
