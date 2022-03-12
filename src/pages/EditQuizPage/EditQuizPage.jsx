@@ -64,7 +64,7 @@ const EditQuizPage = () => {
                             <div className="QuizPage-answer-side">
                                 <span>{question.answer}</span>
                             </div>
-                            <button onClick={() => handleDeleteQuestion(question.id)}>-</button>
+                            <button className="EditQuizPage-delete-question" onClick={() => handleDeleteQuestion(question.id)}>-</button>
                         </div>
                     )
                 })
@@ -109,8 +109,8 @@ const EditQuizPage = () => {
     return(
         <div className="EditQuizPage-container">
             <div className="EditQuizPage-title-banner">
-                <span>{quiz.title}</span>
-                <button onClick={handleAddCard}>+</button>
+                <span className="EditQuizPage-title">{quiz.title}</span>
+                <button className="EditQuizPage-add-button" onClick={handleAddCard}><span className="EditQuizPage-add-span">+</span></button>
             </div>
             <div className="EditQuizPage-questions-container">
                 {renderQuestionsList()}

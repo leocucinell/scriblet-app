@@ -4,3 +4,37 @@
     font-family: Kodchasan;
     overflow-y: scroll;
 }
+
+.EditQuizPage-title-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.EditQuizPage-title{
+    font-size: 3rem;
+    margin-left: 50px;
+}
+.EditQuizPage-add-button{
+    margin-right: 50px;
+    border: none;
+    background-color: #FFEB83;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.EditQuizPage-add-span{
+    position: relative;
+    font-size: 5rem;
+    font-family: Kodchasan;
+    color: #FFFFFF;
+    bottom: 32px;
+    z-index: 0.5;
+}
+
+.EditQuizPage-delete-question{
+    padding: 10px;
+}
