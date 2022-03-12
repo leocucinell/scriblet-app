@@ -1,24 +1,43 @@
 import "./EditQuizPage.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+import { useParams, useNavigate } from "react-router";
 
+import { addStudent } from "../../features/currentStudentSlice";
 import api from "../../api/api";
 
 const EditQuizPage = () => {
 
+    const navigate = useNavigate();
     const { quizId } = useParams();
     const [quiz, setQuiz] = useState({});
     const [showCard, setShowCard] = useState(false);
     const [addQuestion, setAddQuestion] = useState("");
     const [addAnswer, setAddAnswer] = useState("");
+    const dispatch = useDispatch();
+    const currentStudent = useSelector((state) => state.currentStudent.value);
     
     useEffect(() => {
+        //Load the quiz into state
         async function LoadQuiz(){
             const quizData = await api.get(`quiz/${quizId}`);
             setQuiz(quizData.data);
             return quizData.data;
         }
         LoadQuiz();
+
+        //Check the user
+        if(Object.keys(currentStudent).length === 0){
+            const isCurrentStudent = localStorage.getItem("ScribletCurrentStudent");
+            if(isCurrentStudent){
+                dispatch(addStudent(JSON.parse(isCurrentStudent)));
+            } else {
+                //Navigates a user back to landing if no user is saved in 
+                //local storage or Redux state
+                navigate('/');
+            }
+        }
+
     }, []);
 
     const handleDeleteQuestion = async (id) => {

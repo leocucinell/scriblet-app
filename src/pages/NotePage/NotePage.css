@@ -2,16 +2,61 @@
     background-color: #0077E4;
     font-family: Kodchasan;
     height: calc(100vh - 70px);
+}
+
+.NotePage-Owner-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    font-family: Kodchasan;
+    padding: 20px 30px;
 }
 
 .NotePage-title{
-
+    font-size: 2rem;
+    font-family: Kodchasan;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #000000;
 }
 
 .NotePage-body{
+    margin-top: 10px;
+    height: 60vh;
+    resize: none;
+}
 
+.NotePage-Owner-submit{
+    width: 200px;
+    background-color: #25bb45;
+    border: none;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+    left: calc(50% - 100px);
+    font-size: 2rem;
+    margin-top: 15px;
+}
+.NotePage-Owner-submit:active{
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.NotePage-Visitor-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: Kodchasan;
+    padding: 20px 30px;
+}
+.NotePage-span{
+    font-size: 2rem;
+    font-family: Kodchasan;
+}
+.NotePage-readOnly{
+    margin-top: 10px;
+    height: 60vh;
+    resize: none;
 }
