@@ -2,6 +2,7 @@ import "./EditQuizPage.css";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 import { addStudent } from "../../features/currentStudentSlice";
 import api from "../../api/api";
@@ -69,7 +70,7 @@ const EditQuizPage = () => {
                     )
                 })
                 :
-                <p>Write some questions to get started!</p>
+                <p>Click the plus button to add a question!</p>
             :
             <p>Loading...</p>
         )
@@ -111,7 +112,7 @@ const EditQuizPage = () => {
     return(
         <div className="EditQuizPage-container">
             <div className="EditQuizPage-title-banner">
-                <span className="EditQuizPage-title">{quiz.title}</span>
+                <Link to={`/quiz/${quizId}`}><span className="EditQuizPage-title">{quiz.title}</span></Link>
                 <button className="EditQuizPage-add-button" onClick={handleAddCard}><span className="EditQuizPage-add-span">+</span></button>
             </div>
             <div className="EditQuizPage-questions-container">

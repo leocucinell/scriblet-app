@@ -19,9 +19,18 @@
 }
 
 #DetailSelector-add-btn{
-    width: 50px;
+    /* width: 50px; */
     font-size: 1.7rem;
     background-color: #08d545;
     border: 1px solid black;
+    font-family: Kodchasan;
+    cursor: pointer;
+}
+
+.DetailSelector-DeleteSubject-btn{
+    background-color: red;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    font-family: Kodchasan;
     cursor: pointer;
 }

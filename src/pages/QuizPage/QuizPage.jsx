@@ -62,7 +62,7 @@ const QuizPage = () => {
                 Object.keys(quiz.questions).length !== 0 ?
                     <QuizDisplay questions={quiz.questions} />
                 :
-                <p>Write some questions first!</p>
+                <p>Click Edit to write some questions!</p>
             :
             <p>Loading...</p>
         )

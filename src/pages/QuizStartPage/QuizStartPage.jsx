@@ -1,5 +1,5 @@
 import "./QuizStartPage.css"
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 
 import QuizDisplay from "../../components/QuizDisplay/QuizDisplay";
@@ -7,6 +7,7 @@ import api from "../../api/api";
 
 const QuizStartPage = () => {
 
+    const navigate = useNavigate();
     const { quizId } = useParams();
     const [quiz, setQuiz] = useState({});
 
@@ -30,9 +31,14 @@ const QuizStartPage = () => {
         )
     }
 
+    const handleFinishBtn = () => {
+        navigate(`/quiz/${quizId}`);
+    }
+
     return(
         <div className="QuizStartPage-container">
             {renderQuizCard()}
+            <button onClick={handleFinishBtn} className="QuizStartPage-finish-btn">Finish</button>
         </div>
     )
 }

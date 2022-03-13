@@ -52,7 +52,13 @@ const DetailSelector = ({setSubjectObj, subject, currentStudent}) => {
                 </div>
                 {
                     subject.owner_id === currentStudent.id ?
-                    <button id="DetailSelector-add-btn" onClick={handleAdd}>+</button>
+                    <button id="DetailSelector-add-btn" onClick={handleAdd}>add item</button>
+                    :
+                    null
+                }
+                {
+                    subject.owner_id === currentStudent.id ?
+                    <button className="DetailSelector-DeleteSubject-btn" >Delete Subject</button>
                     :
                     null
                 }
