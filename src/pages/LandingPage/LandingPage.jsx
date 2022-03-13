@@ -20,7 +20,7 @@ const LandingPage = () => {
             dispatch(addStudent(JSON.parse(isCurrentStudent)));
             navigate('/home');
         }
-    }, []);
+    }, [dispatch, navigate]);
 
     return(
         <div className="LandingPage-container">

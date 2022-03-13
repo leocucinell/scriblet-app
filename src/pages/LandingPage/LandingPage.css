@@ -23,27 +23,27 @@
     font-family: Kodchasan;
 }
 .LandingPage-main-card > span {
-    position: absolute; 
-    /* TODO: Edit positioning to be inside card */
+    position: relative; 
+    z-index: 10;
     font-size: 2.3em;
     color: #FFFFFF
 }
 #LandingPage-span-1{
-    bottom: 300px;
-    left: 430px;
+    top: 350px;
+    left: 30px;
 }
 #LandingPage-span-2{
-    bottom: 250px;
-    left: 430px;
+    top: 390px;
+    right: 125px;
 }
 #LandingPage-span-3{
-    bottom: 200px;
-    left: 430px;
+    top: 430px;
+    right: 210px;
 }
 
 #LandingPage-mainbutton-container{
-    position: absolute;
+    position: relative;
     width: 175px;
-    bottom: 200px;
-    left: 900px;
+    top: 375px;
+    left: 550px;
 }
