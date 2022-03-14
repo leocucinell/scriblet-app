@@ -78,7 +78,7 @@ const LandingPage = () => {
             </div>
 
             <footer className="LandingPage-footer-container">
-
+                
             </footer>
 
         </div>
