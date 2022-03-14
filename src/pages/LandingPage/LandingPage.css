@@ -47,3 +47,83 @@
     top: 375px;
     left: 550px;
 }
+
+.LandingPage-main-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+#LandingPage-main-info-span{
+    font-size: 2rem;
+    font-family: Kodchasan;
+}
+
+.LandingPage-testemonial{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+#testemonial-1{
+    margin-top: 40px;
+}
+#testemonial-2{
+    flex-direction: row-reverse;
+}
+.LandingPage-testemonial > .testemonial-div-image > img{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.LandingPage-testemonial-info{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+#testemonial-2-info-container{
+    padding-right: 50px;
+}
+
+.testemonial-title{
+    display: block;
+    text-align: center;
+    font-family: Kodchasan;
+    font-size: 1.4rem;
+    font-weight: 1000;
+}
+
+.testemonial-body{
+    display: block;
+    text-align: center;
+    font-family: Kodchasan;
+}
+
+
+.LandingPage-quote-container{
+    margin-top: 80px;
+}
+
+.LandingPage-quote{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Kodchasan;
+    font-weight: 1000;
+}
+.LandingPage-quote-person{
+    font-size: 600;
+    text-align: center;
+    font-family: Kodchasan;
+}
+
+
+.LandingPage-quiz-container{
+    margin-top: 100px;
+}
+
+
+.LandingPage-footer-container{
+    background-color: #022EA0;
+    height: 150px;
+    margin-top: 100px
+}

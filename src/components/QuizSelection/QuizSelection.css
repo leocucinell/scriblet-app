@@ -1,0 +1,23 @@
+.QuizSelection-container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -80px;
+}
+.QuizSelection-options-container{
+
+}
+.QuizSelection-option{
+    background-color: #0077E4;
+    border: 1px solid black;
+    padding: 10px;
+    font-family: Kodchasan;
+    font-size: 1.3rem;
+}
+
+.QuizSelection-quiz-container{
+    background-color: #0077E4;
+    padding: 30px 40px;
+    border: 1px solid black;
+}
