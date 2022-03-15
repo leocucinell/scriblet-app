@@ -1,6 +1,6 @@
 # Welcome to Scriblet!
 >The study helper designed to help you get your goal grade easily.
->(Currently offline to save on costs)
+>(Backend resources currently offline to save on costs)
 
 ## User Flow
 1. Student creates an account so they can save their data easily
